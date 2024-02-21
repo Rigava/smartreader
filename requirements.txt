@@ -1,0 +1,8 @@
+altair<5
+pypdf2
+langchain==0.0.339
+python-dotenv
+faiss-cpu
+google-generativeai
+streamlit-authenticator==0.1.5
+streamlit
