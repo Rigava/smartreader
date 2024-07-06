@@ -37,8 +37,8 @@ from pathlib import Path
 #         st.success(f"Welcome {name}")
 
 # Toggle to the secret keys when deploying in streamlit community
-key = "AIzaSyAKEaaM7fWIErN3VbikjP_T5m0UfhBy5iE"
-# key =st.secrets.API_KEY
+
+key =st.secrets.API_KEY
 def init():
     st.set_page_config(
         page_title="Chat with your PDFs",
