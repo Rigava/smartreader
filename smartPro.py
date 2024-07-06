@@ -6,11 +6,11 @@ from PyPDF2 import PdfReader
 import os
 import google.generativeai as palm
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.embeddings import GooglePalmEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.embeddings import GooglePalmEmbeddings
+from langchain_community.vectorstores import FAISS
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
-from langchain.llms import GooglePalm
+from langchain_community.llms import GooglePalm
 from htmlTemplates import bot_template, user_template, css
 import pickle
 import streamlit_authenticator as stauth

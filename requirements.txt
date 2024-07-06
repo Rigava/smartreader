@@ -6,3 +6,4 @@ faiss-cpu
 google-generativeai
 streamlit-authenticator==0.1.5
 streamlit
+langchain_community
