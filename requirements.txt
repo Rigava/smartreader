@@ -1,9 +1,8 @@
-altair<5
 pypdf2
-langchain==0.0.339
-python-dotenv
 faiss-cpu
 google-generativeai
-streamlit-authenticator==0.1.5
-streamlit
+langchain==0.2.6
 langchain_community
+altair<5
+pydantic==2.7.4
+pydantic_core==2.18.4
