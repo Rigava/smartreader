@@ -36,17 +36,10 @@ from pathlib import Path
 #     elif authentication_status == False:
 #         st.success(f"Welcome {name}")
 
-
+# Toggle to the secret keys when deploying in streamlit community
+key = "AIzaSyAKEaaM7fWIErN3VbikjP_T5m0UfhBy5iE"
+# key =st.secrets.API_KEY
 def init():
-    # Load the OpenAI API key from the environment variable
-    load_dotenv()
-    
-    # test that the API key exists
-    if os.getenv("GOOGLE_API_KEY") is None or os.getenv("GOOGLE_API_KEY") == "":
-        print("API_TOKEN is not set")
-        exit(1)
-    else:
-        print("API_TOKEN is set")
     st.set_page_config(
         page_title="Chat with your PDFs",
         page_icon=":books"
@@ -78,7 +71,7 @@ def get_vector_store(text_chunks):
 
 def get_conversation_chain(vector_store):
     # HuggingFace Model
-    llm = GooglePalm()
+    llm = GooglePalm(model ='models/gemini-1.0-pro',google_api_key =key)
     memory = ConversationBufferMemory(memory_key='chat_history', return_messages=True)
     conversation_chain = ConversationalRetrievalChain.from_llm(
         llm = llm,
