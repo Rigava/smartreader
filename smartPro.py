@@ -1,7 +1,7 @@
 # https://www.youtube.com/watch?v=dXxQ0LR-3Hg&t=2021s
 
 import streamlit as st
-from dotenv import load_dotenv
+
 from PyPDF2 import PdfReader
 import os
 import google.generativeai as palm
