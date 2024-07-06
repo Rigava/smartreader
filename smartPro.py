@@ -15,6 +15,7 @@ from htmlTemplates import bot_template, user_template, css
 import pickle
 import streamlit_authenticator as stauth
 from pathlib import Path
+from langchain_community.chat_models.google_palm import ChatGooglePalm
 
 # USER AUTHENTICATE
 # def login():
@@ -71,7 +72,7 @@ def get_vector_store(text_chunks):
 
 def get_conversation_chain(vector_store):
     # HuggingFace Model
-    llm = GooglePalm(model ='models/text-bison-001',google_api_key =key)
+    llm = ChatGooglePalm(model ='models/gemini-1.0-pro',google_api_key =key)
     memory = ConversationBufferMemory(memory_key='chat_history', return_messages=True)
     conversation_chain = ConversationalRetrievalChain.from_llm(
         llm = llm,
