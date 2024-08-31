@@ -3,6 +3,7 @@ faiss-cpu
 google-generativeai
 langchain==0.2.6
 langchain_community
+langchain-google-genai
 altair<5
 pydantic==2.7.4
 pydantic_core==2.18.4
